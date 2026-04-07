@@ -1,0 +1,2 @@
+﻿
+global using IScriptTextOutputInfrastructure_Implementation = F10Y.T0014.T002.IScriptTextOutputInfrastructure_Implementation;

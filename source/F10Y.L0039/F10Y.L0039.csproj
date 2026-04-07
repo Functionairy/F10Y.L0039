@@ -1,15 +1,24 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <Version>1.0.0</Version>
+  <PropertyGroup Label="Main">
+    <TargetFramework>net8.0</TargetFramework>
+    <NoWarn>CS1573;CS1587;CS1591;IDE0130</NoWarn>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Label="Package">
+    <Version>1.0.0</Version>
     <Authors>DCoats</Authors>
-    <Company>Rivet</Company>
-    <Copyright>Copyright (c) Rivet 2026</Copyright>
-    <Description>--- ADD DESCRIPTION ---</Description>
+    <Copyright>Copyright (c) Functionairy 2026</Copyright>
+    <Description>Solution file generation and modification functionality.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/Functionairy/F10Y.L0039.git</RepositoryUrl>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\F10Y.L0001\source\F10Y.L0001.L004\F10Y.L0001.L004.csproj" />
+    <ProjectReference Include="..\..\..\F10Y.L0001\source\F10Y.L0001.X000\F10Y.L0001.X000.csproj" />
+    <ProjectReference Include="..\F10Y.L0039.T000\F10Y.L0039.T000.csproj" />
+    <ProjectReference Include="..\..\..\F10Y.L0005\source\F10Y.L0005.L003\F10Y.L0005.L003.csproj" />
+    <ProjectReference Include="..\..\..\F10Y.L0001\source\F10Y.L0001.T000\F10Y.L0001.T000.csproj" />
+    <ProjectReference Include="..\..\..\F10Y.L0003\source\F10Y.L0003.L001\F10Y.L0003.L001.csproj" />
+  </ItemGroup>
 </Project>

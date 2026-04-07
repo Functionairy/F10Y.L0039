@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup Label="Main">
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <NoWarn>CS1573;CS1587;CS1591;IDE0130</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Label="Package">
+    <Version>1.0.0</Version>
+    <Authors>DCoats</Authors>
+    <Copyright>Copyright (c) Functionairy 2026</Copyright>
+    <Description>Types library for the F10Y.L0039 solution file generation and modification library.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <RepositoryUrl>https://github.com/Functionairy/F10Y.L0039.git</RepositoryUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\F10Y.L0000\source\F10Y.L0000\F10Y.L0000.csproj" />
+    <ProjectReference Include="..\..\..\F10Y.T0004\source\F10Y.T0004\F10Y.T0004.csproj" />
+  </ItemGroup>
+</Project>
