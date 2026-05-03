@@ -1,5 +1,5 @@
 using System;
-
+using System.Linq;
 using F10Y.T0002;
 using F10Y.T0011;
 
@@ -18,7 +18,7 @@ namespace F10Y.L0039
 #pragma warning restore IDE1006 // Naming Styles
 
 
-        public string Get_ProjectFilePath_Absolute(
+        string Get_ProjectFilePath_Absolute(
             string solutionFilePath,
             string projectFilePath_Relative)
         {
@@ -43,5 +43,14 @@ namespace F10Y.L0039
 
             return output;
         }
+
+        string[] Get_ProjectFilePaths_Relative(
+            string solutionFilePath,
+            params string[] projectFilePaths_Absolute)
+            => projectFilePaths_Absolute
+                .Select(x => this.Get_ProjectFilePath_Relative(
+                    solutionFilePath,
+                    x))
+                .Now();
     }
 }

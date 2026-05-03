@@ -80,7 +80,7 @@ namespace F10Y.L0039
             string solutionFilePath,
             string projectFilePath)
         {
-            var project_Identity = Instances.ProjectIdentityOperator.New_ProjectIdentity();
+            var project_Identity = Instances.ProjectIdentityOperator.New();
 
             var output = this.Add_ProjectReference_Idempotent(
                 solutionFile,
@@ -140,8 +140,7 @@ namespace F10Y.L0039
             return output;
         }
 
-        async Task<string[]> Get_ProjectReferenceFilePaths(
-            string solutionFilePath)
+        async Task<string[]> Get_ProjectReferenceFilePaths(string solutionFilePath)
         {
             var projectReferenceFilePaths = await this.In_ReadContext(
                 solutionFilePath,

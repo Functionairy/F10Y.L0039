@@ -8,7 +8,14 @@ namespace F10Y.L0039
     [FunctionsMarker]
     public partial interface IGlobalSectionGenerator
     {
-        public ExtensibilityGlobalsGlobalSection Get_ExtensibilityGlobals_Default(Guid solutionIdentity)
+        NestedProjectsGlobalSection NestedProjects_Constructor()
+            => new()
+            {
+                Name = Instances.GlobalSectionNames.NestedProjects,
+                PreOrPost = Instances.SolutionFileTokens.PreSolution
+            };
+
+        ExtensibilityGlobalsGlobalSection Get_ExtensibilityGlobals_Default(Guid solutionIdentity)
         {
             var extensibilityGlobalsSection = new ExtensibilityGlobalsGlobalSection()
             {
@@ -31,7 +38,7 @@ namespace F10Y.L0039
         /// <summary>
         /// Gets the default <see cref="IGlobalSectionNames.SolutionProperties"/> global section.
         /// </summary>s
-        public LinesBasedGlobalSection Get_SolutionProperties_Default()
+        LinesBasedGlobalSection Get_SolutionProperties_Default()
         {
             var solutionPropertiesGloblaSection = new LinesBasedGlobalSection()
             {

@@ -18,9 +18,17 @@ namespace F10Y.L0039
 
 
         /// <inheritdoc cref="Strings.IProjectTypeIdentities.CSharpProject"/>
-        public Guid CSharpProject => Instances.GuidOperator.Parse(_Strings.CSharpProject);
+        private static readonly Lazy<Guid> CSharpProject_Lazy = new(() => Instances.GuidOperator.Parse(
+            Strings.IProjectTypeIdentities.CSharpProject_Constant));
+
+        /// <inheritdoc cref="CSharpProject_Lazy"/>
+        Guid CSharpProject => CSharpProject_Lazy.Value;
 
         /// <inheritdoc cref="Strings.IProjectTypeIdentities.SolutionFolder"/>
-        public Guid SolutionFolder => Instances.GuidOperator.Parse(_Strings.SolutionFolder);
+        private static readonly Lazy<Guid> SolutionFolder_Lazy = new(() => Instances.GuidOperator.Parse(
+            Strings.IProjectTypeIdentities.SolutionFolder_Constant));
+
+        /// <inheritdoc cref="SolutionFolder_Lazy"/>
+        Guid SolutionFolder => SolutionFolder_Lazy.Value;
     }
 }
