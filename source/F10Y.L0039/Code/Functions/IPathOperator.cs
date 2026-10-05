@@ -1,11 +1,18 @@
 using System;
 using System.Linq;
+
 using F10Y.T0002;
 using F10Y.T0011;
 
 
 namespace F10Y.L0039
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>
+    /// <inheritdoc cref="Documentation.Project_SelfDescription" path="/summary"/>
+    /// </remarks>
     [FunctionsMarker]
     public partial interface IPathOperator :
         L0000.IPathOperator
