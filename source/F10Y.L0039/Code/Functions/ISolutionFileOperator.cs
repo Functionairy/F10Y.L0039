@@ -140,6 +140,7 @@ namespace F10Y.L0039
             return output;
         }
 
+        /// <inheritdoc cref="Get_ProjectReferenceFilePaths(SolutionFile, string)"/>
         async Task<string[]> Get_ProjectReferenceFilePaths(string solutionFilePath)
         {
             var projectReferenceFilePaths = await this.In_ReadContext(
@@ -149,6 +150,9 @@ namespace F10Y.L0039
             return projectReferenceFilePaths;
         }
 
+        /// <summary>
+        /// Gets project file paths for all projects referenced by a solution file.
+        /// </summary>
         string[] Get_ProjectReferenceFilePaths(
             SolutionFile solutionFile,
             string solutionFilePath)

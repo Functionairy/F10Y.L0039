@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 
 using F10Y.T0002;
 
@@ -28,6 +29,15 @@ namespace F10Y.L0039
         {
             var solutionFile = this.New_2022();
             return solutionFile;
+        }
+
+        async Task New(string solutionFilePath)
+        {
+            var solutionFile = this.New();
+
+            await Instances.SolutionFileOperator.Serialize(
+                solutionFilePath,
+                solutionFile);
         }
     }
 }
